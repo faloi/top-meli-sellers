@@ -29,7 +29,7 @@ En cuanto a MercadoLibre, todo lo necesario puede encontrarse en el [site de dev
 
 ### Cómo correr la aplicación y los tests?
 
-Aplicación: `grunt serve`
-Tests: `karma start`
+- Servidor: `grunt serve`
+- Tests: `karma start`
 
 Ambos comandos se quedan esperando cambios, por lo que conviene correrlos en 2 terminales diferentes.
