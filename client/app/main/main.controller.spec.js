@@ -14,7 +14,9 @@ describe('Controller: MainCtrl', function () {
     $httpBackend = _$httpBackend_;
     $httpBackend.expectGET('https://api.mercadolibre.com/sites/MLA/categories')
       .respond([
-        {id: "MLA5725", name: "Accesorios para Vehículos"}, {id: "MLA1071", name: "Animales y Mascotas"}, {id: "MLA1367", name: "Antigüedades"}
+        {id: "MLA5725", name: "Accesorios para Vehículos"},
+        {id: "MLA1071", name: "Animales y Mascotas"},
+        {id: "MLA1367", name: "Antigüedades"}
       ]);
 
     scope = $rootScope.$new();
@@ -23,7 +25,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of things to the scope', function () {
+  it('should attach a list of categories to the scope', function () {
     $httpBackend.flush();
     expect(scope.categories.length).toBe(3);
   });
