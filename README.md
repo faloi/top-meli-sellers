@@ -29,7 +29,8 @@ En cuanto a MercadoLibre, todo lo necesario puede encontrarse en el [site de dev
 
 ### Cómo correr la aplicación y los tests?
 
+- Instalación de dependencias / setup inicial: `npm install && bower install`
 - Servidor: `grunt serve`
-- Tests: `karma start`
+- Tests: `grunt test`
 
-Ambos comandos se quedan esperando cambios, por lo que conviene correrlos en 2 terminales diferentes.
+Ambos comandos se quedan monitoreando cambios, por lo que conviene correrlos en 2 terminales diferentes.
