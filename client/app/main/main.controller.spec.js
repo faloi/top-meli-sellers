@@ -12,8 +12,10 @@ describe('Controller: MainCtrl', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function (_$httpBackend_, $controller, $rootScope) {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('/api/things')
-      .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
+    $httpBackend.expectGET('https://api.mercadolibre.com/sites/MLA/categories')
+      .respond([
+        {id: "MLA5725", name: "Accesorios para Vehículos"}, {id: "MLA1071", name: "Animales y Mascotas"}, {id: "MLA1367", name: "Antigüedades"}
+      ]);
 
     scope = $rootScope.$new();
     MainCtrl = $controller('MainCtrl', {
@@ -23,6 +25,6 @@ describe('Controller: MainCtrl', function () {
 
   it('should attach a list of things to the scope', function () {
     $httpBackend.flush();
-    expect(scope.awesomeThings.length).toBe(4);
+    expect(scope.categories.length).toBe(3);
   });
 });
