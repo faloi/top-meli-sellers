@@ -18,8 +18,9 @@ Como lenguaje se utilizará JavaScript, con los siguientes frameworks:
  
 y las siguientes herramientas:
 
+- [Yeoman](http://yeoman.io/): responsable del scaffolding de la aplicación
 - [Grunt](http://gruntjs.com/): task runner para automatizar la tarea de levantar el servidor y refrescar ante un cambio en el código
-
+- [Bower](http://bower.io/): "package manager for the web", es el que se encarga de bajar las dependencias de la app
 
 ### Por dónde arrancar?
 
