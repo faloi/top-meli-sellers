@@ -29,4 +29,23 @@ describe('Controller: MainCtrl', function () {
     $httpBackend.flush();
     expect(scope.categories.length).toBe(3);
   });
+
+  it('should get the top 3 sellers of some listings', function() {
+     var listing = function(sellerId, quantity) {
+       return { seller: { id: sellerId }, sold_quantity: quantity };
+     }
+
+     expect(scope.getTopSellersIdsFor([
+       listing(1, 10),
+       listing(1, 50),
+       listing(2, 80),
+       listing(3, 25),
+       listing(4, 15),
+       listing(4, 15)
+     ])).toEqual([
+      { id: 2, quantity: 80 },
+      { id: 1, quantity: 60 },
+      { id: 4, quantity: 30 }
+     ]);
+  });
 });
